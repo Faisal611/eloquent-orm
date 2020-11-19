@@ -16,4 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('newFile','Controller@index');
+
+//User create
+Route::get('create_user','PostController@createUser');
+
+//post create
+Route::get('create_post','PostController@createPost');
+
+//Data lifting
+Route::get('all_post','PostController@allPost');
+
+//parameter create
+Route::get('post_id/{id}','PostController@postId');
+
+//new post create
+Route::get('add_post','PostController@addPost');
+
+// update post
+Route::get('update_post','PostController@updatePost');
+
+//Delete post
+Route::get('delete_post','PostController@deletePost');
